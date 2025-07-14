@@ -1,4 +1,4 @@
-import { keyMap } from "./constant.js";
+import { keyMap } from "../constant.js";
 import { crashed, moveSnake } from "./snake.js";
 import { generateRandomFood, getIndex } from "./utils.js";
 
