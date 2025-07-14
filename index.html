@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Snake Game</h1>
+
+    <div id="navigation">
+      <div id="game-controls">
+        <div class="select">
+          <label>Board Size</label>
+          <div class="select-wrapper">
+            <select id="board-size">
+              <option value="15">Small (15x15)</option>
+              <option value="20" selected>Medium (20x20)</option>
+              <option value="25">Large (25x25)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="select">
+          <label>Speed</label>
+          <div class="select-wrapper">
+            <select id="speed-select">
+              <option value="300">Slow</option>
+              <option value="150" selected>Normal</option>
+              <option value="75">Fast</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <button id="start-button">Start Game</button>
+    </div>
+
+    <div id="game-container">
+      <div id="game-board"></div>
+      <div id="game-over">Game Over!</div>
+    </div>
+    <div id="score"></div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
