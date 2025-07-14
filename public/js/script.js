@@ -1,4 +1,4 @@
-import { keyMap } from "../constant.js";
+import { keyMap } from "./constant.js";
 import { crashed, moveSnake } from "./snake.js";
 import { generateRandomFood, getIndex } from "./utils.js";
 
@@ -65,9 +65,14 @@ function clearGrid() {
 }
 
 function drawSnake() {
-  snake.forEach((part) => {
+  snake.forEach((part, i) => {
     const index = getIndex(part.x, part.y, boardSize);
     if (grid[index]) {
+      if (i === 0) {
+        grid[index].classList.add("snake-head");
+        return;
+      }
+
       grid[index].classList.add("snake");
     }
   });
@@ -126,6 +131,11 @@ function resetGameState() {
 }
 
 function handleKeyPress(e) {
+  if (e.key === "Enter") {
+    startGame();
+    return;
+  }
+
   if (isOver) return;
   const move = keyMap[e.key];
 

@@ -5,6 +5,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Inter", Arial, sans-serif;
 }
 
 #navigation {
@@ -30,17 +31,25 @@ body {
 #game-board {
   display: flex;
   background-color: #4e443a;
+  border: 24px solid #341f0b;
+  box-shadow: 0 4px 32px #000a;
+  border-radius: 24px;
   flex-wrap: wrap;
 }
 
 .cell {
   width: 20px;
   height: 20px;
+  border-radius: 4px;
 }
 
 .snake {
-  background-color: #578a34;
-  border-radius: 2px;
+  background: linear-gradient(135deg, #5be358 60%, #3b883b 100%);
+  box-shadow: 0 1px 4px #14141444;
+}
+
+.snake-head {
+  background: #a5ff7a;
 }
 
 .food {
@@ -90,7 +99,7 @@ select {
   -moz-appearance: none;
   appearance: none;
   font-size: 16px;
-  background-color: #4e443a;
+  background-color: #341f0b;
   border: 2px solid #6c5f53;
   color: #ecf0f1;
   border-radius: 8px;
@@ -99,12 +108,12 @@ select {
 }
 
 button {
-  height: 48px;
+  height: 38px;
   background-color: #578a34;
   color: #ecf0f1;
   border: none;
   border-radius: 8px;
-  padding: 12px 24px;
+  padding: 8px 15px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
